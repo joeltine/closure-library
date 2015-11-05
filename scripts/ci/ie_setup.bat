@@ -41,3 +41,7 @@ reg add "HKEY_CURRENT_USER\Software\Microsoft\Internet Explorer\Main" ^
     /v "Disable Script Debugger" /t REG_SZ /d yes /f
 reg add "HKEY_CURRENT_USER\Software\Microsoft\Internet Explorer\Main" ^
     /v "DisableScriptDebuggerIE" /t REG_SZ /d yes /f
+    
+:: Enable CORS restriction in IE8.
+REG ADD “HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3” ^
+    /v 1406 /t REG_DWORD /d 3 /f
